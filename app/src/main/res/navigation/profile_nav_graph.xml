@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/profile_nav_graph"
+    app:startDestination="@id/genderAndAgeFragment">
+
+    <fragment
+        android:id="@+id/genderAndAgeFragment"
+        android:name="com.jks.ketchup.ui.setup.fragments.GenderAndAgeFragment"
+        android:label="GenderAndAgeFragment" >
+        <action
+            android:id="@+id/action_genderAndAgeFragment_to_profilePicFragment"
+            app:destination="@id/profilePicFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profilePicFragment"
+        android:name="com.jks.ketchup.ui.setup.fragments.ProfilePicFragment"
+        android:label="ProfilePicFragment" >
+        <action
+            android:id="@+id/action_profilePicFragment_to_genderAndAgeFragment"
+            app:destination="@id/genderAndAgeFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="50dp"
+        android:contentDescription="@null"
+        android:src="@drawable/splashicon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.559"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/materialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:padding="20dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        tools:layout_editor_absoluteX="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/etregusername"
+                android:hint="@string/username"
+                android:importantForAutofill="no"
+                tools:Ignore="AutoFill"
+                android:textColor="#000"
+                android:theme="@style/AppTheme"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:padding="13dp"
+                android:maxLines="1"
+                android:fontFamily="@font/metro"
+                android:inputType="text"
+                android:background="@drawable/border_search"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/etregemail"
+                android:hint="@string/email"
+                android:importantForAutofill="no"
+                tools:Ignore="AutoFill"
+                android:inputType="textEmailAddress"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:padding="13dp"
+                android:theme="@style/AppTheme"
+                android:textColor="#000"
+                android:fontFamily="@font/metro"
+                android:layout_below="@+id/etregusername"
+                android:background="@drawable/border_search"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/etregpassword"
+                android:hint="@string/password"
+                android:textColor="#000"
+                android:theme="@style/AppTheme"
+                android:importantForAutofill="no"
+                tools:Ignore="AutoFill"
+                android:inputType="textPassword"
+                android:layout_below="@+id/etregemail"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:padding="13dp"
+                android:fontFamily="@font/metro"
+                android:background="@drawable/border_search"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"/>
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:id="@+id/btnreg"
+                android:textColor="#fff"
+                android:textSize="19sp"
+                android:fontFamily="@font/metro"
+                android:backgroundTint="#000"
+                android:textAllCaps="false"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:text="@string/create_new_account"
+                android:layout_below="@+id/etregpassword"
+                android:layout_height="60dp"/>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <ProgressBar
+        android:id="@+id/registerprogress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
+        android:indeterminateTint="#000"
+        app:layout_constraintBottom_toTopOf="@+id/tv_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:textColor="#000"
+        android:fontFamily="@font/metro"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

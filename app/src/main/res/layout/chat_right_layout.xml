@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="end"
+    android:layout_gravity="end"
+    android:layout_marginStart="100dp"
+    android:layout_alignParentEnd="true"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp">
+
+
+    <TextView
+        android:layout_alignParentEnd="true"
+        android:id="@+id/tv_chat_messg"
+        android:layout_marginStart="100dp"
+        android:maxWidth="300dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+
+        android:background="@drawable/borderyellow"
+        android:backgroundTint="#7C8EF1"
+        android:fontFamily="@font/metro"
+        android:maxLines="20"
+
+
+        android:padding="10dp"
+        android:text="@string/mssg_right"
+        android:textColor="#000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/user_nav_graph"
+    app:startDestination="@id/mainRoomFragment">
+
+
+    <fragment
+        android:id="@+id/mainRoomFragment"
+        android:name="com.jks.ketchup.ui.alluser.fragments.MainRoomFragment"
+        android:label="MainRoomFragment" >
+        <action
+            android:id="@+id/action_mainRoomFragment_to_roomSearchFragment"
+            app:destination="@id/roomSearchFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/allUserFragment"
+        android:name="com.jks.ketchup.ui.alluser.fragments.AllUserFragment"
+        android:label="AllUserFragment" >
+
+        <action
+            android:id="@+id/action_allUserFragment_to_userSearchFragment"
+            app:destination="@id/userSearchFragment" />
+        <action
+            android:id="@+id/action_allUserFragment_to_fragmentFriends"
+            app:destination="@id/fragmentFriends" />
+        <action
+            android:id="@+id/action_allUserFragment_to_fragmentChatHistory"
+            app:destination="@id/fragmentChatHistory" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createRoomFragment"
+        android:name="com.jks.ketchup.ui.alluser.fragments.CreateRoomFragment"
+        android:label="CreateRoomFragment" />
+
+
+    <action android:id="@+id/setGlobalActionToCreateRoom"
+        app:destination="@id/createRoomFragment"/>
+    <fragment
+        android:id="@+id/myAccountFragment"
+        android:name="com.jks.ketchup.ui.alluser.fragments.MyAccountFragment"
+        android:label="MyAccountFragment" />
+    <fragment
+        android:id="@+id/joinWithCodeFragment"
+        android:name="com.jks.ketchup.ui.alluser.fragments.JoinWithCodeFragment"
+        android:label="JoinWithCodeFragment" />
+    <fragment
+        android:id="@+id/fragmentFriends"
+        android:name="com.jks.ketchup.ui.chat.FragmentFriends"
+        android:label="FragmentFriends" >
+        <action
+            android:id="@+id/action_fragmentFriends_to_allUserFragment"
+            app:destination="@id/allUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentChatHistory"
+        android:name="com.jks.ketchup.ui.chat.FragmentChatHistory"
+        android:label="FragmentChatHistory" >
+        <action
+            android:id="@+id/action_fragmentChatHistory_to_allUserFragment"
+            app:destination="@id/allUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/roomSearchFragment"
+        android:name="com.jks.ketchup.ui.alluser.fragments.RoomSearchFragment"
+        android:label="RoomSearchFragment" />
+    <fragment
+        android:id="@+id/userSearchFragment"
+        android:name="com.jks.ketchup.ui.alluser.fragments.UserSearchFragment"
+        android:label="UserSearchFragment" />
+</navigation>

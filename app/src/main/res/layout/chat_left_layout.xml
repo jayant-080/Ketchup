@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_gravity="start"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp">
+
+
+    <TextView
+        android:id="@+id/tv_chat_messg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:fontFamily="@font/metro"
+        android:layout_marginStart="3dp"
+        android:background="@drawable/border"
+        android:maxLines="20"
+        android:padding="10dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/mssg_left"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

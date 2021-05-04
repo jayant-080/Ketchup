@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_main_room_image_frag"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/splashicon"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName_frag"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName_frag"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_main_roomName_frag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/metro"
+        android:gravity="center"
+        android:text="@string/ketchup"
+        android:textColor="#000"
+        android:layout_marginTop="80dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_main_room_image_frag" />
+
+
+    <TextView
+        android:id="@+id/tv_main_room_private_hint_frag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/metro"
+        android:gravity="center"
+        android:text="@string/enter_code_to_connect"
+        android:textColor="#000"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_main_roomName_frag" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName_frag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/border_search"
+        android:digits="abcdefghijklmnopqrstuvwzyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:ems="10"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/metro"
+        android:hint="@string/code"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:maxLines="1"
+        android:padding="13dp"
+        android:textColor="#000"
+        android:textColorHint="#927F7F"
+        android:theme="@style/AppTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_main_room_private_hint_frag"
+        tools:Ignore="AutoFill" />
+
+    <Button
+        android:id="@+id/button_join"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#000"
+        android:fontFamily="@font/metro"
+        android:text="@string/join"
+        android:layout_marginTop="40dp"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName_frag" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

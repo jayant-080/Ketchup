@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="240dp"
+        android:contentDescription="@null"
+        android:layout_height="240dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/splashicon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_room_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:importantForAutofill="no"
+        tools:Ignore="AutoFill"
+        android:theme="@style/AppTheme"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/border_search"
+        android:fontFamily="@font/metro"
+        android:hint="@string/room_name"
+        android:textSize="14sp"
+        android:inputType="text"
+        android:maxLines="1"
+        android:padding="13dp"
+        android:textColor="#000"
+        android:textColorHint="#8E8585"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:layout_constraintVertical_bias="0.19999999" />
+
+
+    <EditText
+        android:id="@+id/et_room_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:importantForAutofill="no"
+        tools:Ignore="AutoFill"
+        android:theme="@style/AppTheme"
+        android:background="@drawable/border_search"
+        android:hint="@string/room_description"
+        android:inputType="text"
+        android:fontFamily="@font/metro"
+        android:maxLines="10"
+        android:padding="13dp"
+        android:textSize="14sp"
+        android:textColor="#000"
+        android:textColorHint="#8E8585"
+        app:layout_constraintEnd_toEndOf="@+id/et_room_name"
+        app:layout_constraintStart_toStartOf="@+id/et_room_name"
+        app:layout_constraintTop_toBottomOf="@+id/et_room_name" />
+
+    <EditText
+        android:id="@+id/et_room_password"
+        android:layout_width="0dp"
+        android:importantForAutofill="no"
+        tools:Ignore="AutoFill"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:theme="@style/AppTheme"
+        android:background="@drawable/border_search"
+        android:hint="@string/room_code"
+        android:inputType="text"
+        android:digits="abcdefghijklmnopqrstuvwzyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:fontFamily="@font/metro"
+        android:textSize="14sp"
+        android:maxLines="1"
+        android:padding="15dp"
+        android:textColor="#000"
+        android:textColorHint="#8E8585"
+        app:layout_constraintEnd_toEndOf="@+id/et_room_description"
+        app:layout_constraintStart_toStartOf="@+id/et_room_description"
+        app:layout_constraintTop_toBottomOf="@+id/et_room_description"
+        tools:ignore="TextFields" />
+
+
+    <Button
+        android:id="@+id/btn_room_create"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#000"
+        android:text="@string/create"
+        android:fontFamily="@font/metro"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/et_room_password"
+        app:layout_constraintStart_toStartOf="@+id/et_room_password"
+        app:layout_constraintTop_toBottomOf="@+id/et_room_password"
+        app:layout_constraintVertical_bias="0.59000003" />
+
+    <ProgressBar
+        android:id="@+id/pbcreateroom"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateTint="#000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/btn_room_create"
+        app:layout_constraintEnd_toEndOf="@+id/btn_room_create"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_room_password"
+        app:layout_constraintVertical_bias="0.78" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/create_a_room"
+        android:fontFamily="@font/metro"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/et_room_name"
+        app:layout_constraintEnd_toEndOf="@+id/et_room_name"
+        app:layout_constraintStart_toStartOf="@+id/et_room_name"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/btn_room_create"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="30dp"
+        android:id="@+id/radio_createroom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_room_password" >
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rb_private"
+            android:textColor="#FFC400"
+            android:layout_marginEnd="100dp"
+            android:text="@string/privateroom"
+            android:background="@drawable/radiobttn"
+            android:padding="10dp" />
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFC400"
+            android:id="@+id/rb_public"
+            android:text="@string/publicroom"
+            android:checked="true"
+            android:background="@drawable/radiobttn"
+            android:padding="10dp"
+            />
+
+
+    </RadioGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>

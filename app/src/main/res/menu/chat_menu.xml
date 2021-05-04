@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="chat"
+        android:id="@+id/chatmenu"
+        android:icon="@drawable/ic_baseline_send_chat"
+        app:showAsAction="always"/>
+
+</menu>

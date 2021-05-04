@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#fff"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/main_user_search_toolbar"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:fontFamily="@font/metro"
+        app:titleTextColor="#000"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="5dp"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/metro"
+                android:text="@string/search_users"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:hint="@string/search_users"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:theme="@style/AppTheme"
+                android:importantForAutofill="no"
+                tools:Ignore="AutoFill"
+                android:textColor="#000"
+                android:inputType="text"
+                android:fontFamily="@font/metro"
+                android:maxLines="1"
+                android:id="@+id/et_search_users"
+                android:textColorHint="#A39595"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/border_search"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/rv_search_user"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_below="@+id/main_user_search_toolbar"
+        android:layout_height="match_parent"/>
+
+    <ProgressBar
+        android:id="@+id/pb_search_user"
+        style="?android:attr/progressBarStyle"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:indeterminateTint="#000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

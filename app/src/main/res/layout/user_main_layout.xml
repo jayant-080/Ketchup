@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:background="#fff"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_main_profile"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/male"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/iv_onlineicon"
+        android:src="@drawable/ic_online_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/user_main_profile"
+        app:layout_constraintEnd_toEndOf="@+id/user_main_profile" />
+
+    <TextView
+        android:id="@+id/tv_main_username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/metro"
+        android:text="@string/username"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/user_main_profile"
+        app:layout_constraintTop_toTopOf="@+id/user_main_profile" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/metro"
+        android:text="@string/active_10m_ago"
+        android:textColor="#000"
+        android:textSize="14sp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/user_main_profile"
+        app:layout_constraintEnd_toStartOf="@+id/tv_main_addfriend"
+        app:layout_constraintStart_toEndOf="@+id/user_main_profile" />
+
+
+    <TextView
+        android:id="@+id/tv_main_addfriend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_to_friend"
+        android:visibility="gone"
+        android:textColor="#000"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
